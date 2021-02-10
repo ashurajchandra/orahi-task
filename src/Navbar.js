@@ -13,6 +13,9 @@ class Navbar extends Component {
 
     return (
       <div className="navbar">
+        {!isLoggedIn && (
+          <p>Welcome to dashboard Please click Login to continue</p>
+        )}
         {isLoggedIn ? (
           <h3 onClick={this.handleLogout}>Logout</h3>
         ) : (

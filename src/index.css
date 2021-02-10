@@ -31,6 +31,11 @@ code {
 .navbar h3:hover {
   color: yellow;
 }
+.navbar p {
+  margin-right: 300px;
+  font-size: 20px;
+  color: whitesmoke;
+}
 
 .no-arrow {
   -moz-appearance: textfield;
