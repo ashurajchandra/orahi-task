@@ -15,7 +15,16 @@ code {
   /* margin-top: 100px; */
   background-color: grey;
 }
-
+.bar-graph {
+  transform: rotate(-90deg);
+  width: 862px;
+  height: 600px;
+  background-color: lightgrey;
+}
+g {
+  width: 862px;
+  height: 600px;
+}
 .title {
   font-size: 1.4em;
   font-weight: 300;
@@ -26,6 +35,7 @@ code {
   font-weight: 300;
   font-size: 1em;
   fill: #333;
+  /* transform: rotate(90deg); */
 }
 
 .bar-group .value-label {

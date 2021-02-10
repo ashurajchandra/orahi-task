@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import BarGraph from "./BarGraph";
+import BarGroup from "./BarGroup";
 
 class Home extends Component {
   constructor() {
@@ -21,21 +21,25 @@ class Home extends Component {
         this.setState({ items: data.data });
       });
   }
+
   render() {
-    const { items } = this.state;
-    console.log("data from state", items);
+    let barHeight = 20;
+    let barGroups = this.state.items.map((item, index) => (
+      <g transform={`translate(0, ${index * barHeight})`}>
+        <BarGroup item={item} barHeight={barHeight} />
+      </g>
+    ));
+    // const { items } = this.state;
+    // console.log("data from state", items);
     return (
-      <div>
-        <h3>i am home component</h3>
-        {items.map(
-          (item, index) => (
-            <BarGraph item={item} index={index} />
-          )
-          // <div>
-          //   <div className="month">Month:{item.month}</div>
-          //   <div className="stat">Stat:{item.stat}</div>
-          // </div>
-        )}
+      <div class="bar-graph">
+        <svg width="800" height="500">
+          <g className="container">
+            <g className="chart" transform="translate(100,60)">
+              {barGroups}
+            </g>
+          </g>
+        </svg>
       </div>
     );
   }
