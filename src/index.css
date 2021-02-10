@@ -11,23 +11,74 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.home-component {
-  /* margin-top: 100px; */
-  background-color: grey;
+
+.navbar {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  background-color: blue;
+  align-items: center;
+  justify-content: flex-end;
 }
-.bar-graph {
-  transform: rotate(-90deg);
-  width: 862px;
-  height: 600px;
+
+.navbar h3 {
+  margin-right: 100px;
+  font-size: 25px;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.navbar h3:hover {
+  color: yellow;
+}
+
+.no-arrow {
+  -moz-appearance: textfield;
+}
+.no-arrow::-webkit-inner-spin-button {
+  display: none;
+}
+.no-arrow::-webkit-outer-spin-button,
+.no-arrow::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.login-card {
+  margin: 10%;
+  margin-left: 30%;
+  height: 430px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+}
+.login-card input {
+  width: 80%;
+  height: 40px;
+  border-style: none;
+  border-bottom: 2px solid black;
+  padding: 2px;
+  font-size: 17px;
+}
+.login-card input:focus {
+  outline: none;
+}
+.login-card button:focus {
+  outline: none;
+}
+#continue-btn {
+  height: 50px;
+  margin-top: 20px;
+  width: 85%;
+  border-radius: 20px;
+  border-style: none;
+  font-size: 20px;
+}
+.home-body {
   background-color: lightgrey;
-}
-g {
-  width: 862px;
-  height: 600px;
-}
-.title {
-  font-size: 1.4em;
-  font-weight: 300;
+  padding: 10%;
 }
 
 .bar-group .name-label {
@@ -35,7 +86,6 @@ g {
   font-weight: 300;
   font-size: 1em;
   fill: #333;
-  /* transform: rotate(90deg); */
 }
 
 .bar-group .value-label {

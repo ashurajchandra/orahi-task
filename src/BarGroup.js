@@ -4,9 +4,7 @@ function BarGroup(props) {
   const { item } = props;
   const { stat } = props.item;
   const { month } = props.item;
-  console.log("item's stat", stat);
-  console.log("item's month", month);
-  console.log("bargroup props", item);
+
   let barPadding = 2;
   let barColour = "#348AA7";
   let widthScale = (stat) => stat * 1.5;
