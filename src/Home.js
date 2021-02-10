@@ -24,7 +24,7 @@ class Home extends Component {
 
   render() {
     if (localStorage.getItem("token") == null) return <Redirect to="/login" />;
-    let barHeight = 20;
+    let barHeight = 35;
     let barGroups = this.state.items.map((item, index) => (
       <g transform={`translate(0, ${index * barHeight})`}>
         <BarGroup item={item} barHeight={barHeight} />
@@ -34,7 +34,7 @@ class Home extends Component {
     return (
       <div className="home-body">
         <div class="bar-graph">
-          <svg width="800" height="500">
+          <svg width="900" height="600" className="svg">
             <g className="container">
               <g className="chart" transform="translate(100,60)">
                 {barGroups}

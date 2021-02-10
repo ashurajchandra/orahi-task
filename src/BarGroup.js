@@ -7,7 +7,7 @@ function BarGroup(props) {
 
   let barPadding = 2;
   let barColour = "#348AA7";
-  let widthScale = (stat) => stat * 1.5;
+  let widthScale = (stat) => stat * 1.8;
 
   let width = widthScale(props.item.stat);
   console.log("width", width);
